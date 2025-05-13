@@ -1,13 +1,40 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite + React</title>
+    <meta name="description" content="Check It! - A minimalist todo app inspired by Apple's design">
+    
+    <!-- Favicon (puedes reemplazar con tu propio logo más tarde) -->
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+    
+    <!-- Preconnect para fuentes opcionales -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
+    <!-- Meta tags para SEO y compartir en redes sociales -->
+    <meta property="og:title" content="Check It! - Minimalist Todo App">
+    <meta property="og:description" content="A beautiful, minimalist todo application inspired by Apple's design">
+    <meta property="og:type" content="website">
+    <meta name="theme-color" content="#f9fafb">
+    
+    <title>Check It! | Minimalist Todo App</title>
+    
+    <!-- Preload crítico CSS (opcional para producción) -->
+    <link rel="preload" href="/src/index.css" as="style">
   </head>
-  <body>
+  <body class="font-smooth antialiased">
     <div id="root"></div>
     <script type="module" src="/src/main.jsx"></script>
+    
+    <!-- Smooth scrolling polyfill para Safari -->
+    <script>
+      if (!('scrollBehavior' in document.documentElement.style)) {
+        import('smoothscroll-polyfill').then((module) => {
+          module.polyfill();
+        });
+      }
+    </script>
   </body>
 </html>
