@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react'
 import { motion } from 'framer-motion'
-import MinimalFooter from '../components/MinimalFooter'
+import Footer from '../components/Footer'  // Cambiado de MinimalFooter a Footer
 
 export default function Home() {
   const [todos, setTodos] = useState([])
@@ -129,8 +129,8 @@ export default function Home() {
         </section>
       </main>
 
-      {/* Footer */}
-      <MinimalFooter />
+      {/* Footer - nombre cambiado de MinimalFooter a Footer */}
+      <Footer />
     </div>
   )
 }
