@@ -2,8 +2,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import { AnimatePresence } from 'framer-motion'
 import { useLocation } from 'react-router-dom'
 import Home from './pages/Home'
-import About from './pages/About'
-import Navbar from './components/Navbar'
+//import About from './pages/About'
 import { Toaster } from 'react-hot-toast'
 
 function App() {
@@ -12,15 +11,12 @@ function App() {
   return (
     <Router>
       <div className="min-h-screen bg-gray-50">
-        {/* Barra de navegación */}
-        <Navbar />
-        
         {/* Contenido principal */}
         <main className="container mx-auto px-4 py-8">
           <AnimatePresence mode="wait">
             <Routes location={location} key={location.pathname}>
               <Route path="/" element={<Home />} />
-              <Route path="/about" element={<About />} />
+              {/* <Route path="/about" element={<About />} /> */}
             </Routes>
           </AnimatePresence>
         </main>
